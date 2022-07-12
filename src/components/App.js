@@ -1,4 +1,7 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from ".Home";
+import About from ".About";
+import SongRequests from ".SongRequests";
 
 
 /*

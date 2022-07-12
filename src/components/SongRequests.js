@@ -9,3 +9,5 @@ function SongRequests(){
     </div>
   )
 }
+
+export default SongRequests;
