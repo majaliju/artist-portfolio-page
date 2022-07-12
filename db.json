@@ -1,0 +1,22 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "artistName": "Usher",
+      "songName": "U Remind Me",
+      "likes" : 5
+    },
+    {
+      "id": 2,
+      "artistName": "Hall and Oates",
+      "songName": "Sara Smile",
+      "likes" : 8
+    },
+    {
+      "id": 3,
+      "artistName": "David Bowie",
+      "songName": "Fascination",
+      "likes" : 4
+    }
+  ]
+}
