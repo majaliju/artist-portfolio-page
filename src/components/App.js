@@ -26,9 +26,11 @@ Add some styling: you're encouraged to write your CSS from scratch, either by us
 function App() {
   return (
     <BrowserRouter>
-     <div>
-      <Navbar />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/requests" element={<SongRequests />} />
+    </Routes>
     </BrowserRouter>
    
   );
