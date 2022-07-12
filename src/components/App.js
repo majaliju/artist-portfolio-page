@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from ".Home";
-import About from ".About";
-import SongRequests from ".SongRequests";
-
+import Home from './Home';
+import About from './About';
+import SongRequests from './SongRequests';
+import Navbar from './Navbar';
 
 /*
 (CHECK)
@@ -28,10 +28,12 @@ Add some styling: you're encouraged to write your CSS from scratch, either by us
 function App() {
   return (
     <BrowserRouter>
+    <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/requests" element={<SongRequests />} />
+      <Route path="/songrequests" element={<SongRequests />} />
     </Routes>
     </BrowserRouter>
    
