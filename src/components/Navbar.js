@@ -1,29 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 function Navbar(){
   return (
-    <div>
-      <ul>
-      <li><NavLink to="/Home" exact>
-      <Button variant="outlined" href="#outlined-buttons">
-          Home
-      </Button>
-      </NavLink></li>
-      <li><NavLink to="/About" exact>
-      <Button variant="outlined" href="#outlined-buttons">
-        About
-      </Button>
-      </NavLink></li>
-      <li><NavLink to="/SongRequests" exact>
-      <Button variant="outlined" href="#outlined-buttons">
-          SongRequests
-      </Button>
-      </NavLink></li>
-    </ul>
-    <h1>MAJ ALIJU</h1>
-    </div>
+    <Tabs>
+      <TabList>
+        <Tab>MAJ ALIJU</Tab>
+        <Tab><NavLink to="/Home" exact>
+            Home
+          </NavLink></Tab>
+        <Tab><NavLink to="/About" exact>
+            About
+          </NavLink></Tab>
+        <Tab><NavLink to="/SongRequests" exact>
+            SongRequests
+          </NavLink></Tab>
+      </TabList>
+    </Tabs>
     
   )
 }

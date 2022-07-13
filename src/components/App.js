@@ -4,11 +4,9 @@ import Home from './Home';
 import About from './About';
 import SongRequests from './SongRequests';
 import Navbar from './Navbar';
-
 import * as React from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+
+import { ChakraProvider } from '@chakra-ui/react'
 
 
 
@@ -35,21 +33,9 @@ Add some styling: you're encouraged to write your CSS from scratch, either by us
 
 function App() {
 
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  );
 
   return (
-    <ThemeProvider theme={theme}>
-    <CssBaseline />
+    <ChakraProvider>
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
@@ -57,7 +43,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/songrequests" element={<SongRequests/>} />
     </Routes>
-    </ThemeProvider>
+    </ChakraProvider>
    
   );
 }
