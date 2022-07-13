@@ -1,8 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+// import {useEffect, useState} from 'react';
 import Home from './Home';
 import About from './About';
 import SongRequests from './SongRequests';
 import Navbar from './Navbar';
+import React from 'react';
 
 /*
 (CHECK)
@@ -25,9 +27,7 @@ Add some styling: you're encouraged to write your CSS from scratch, either by us
 // db.json file holds the actual artist-name and song-title name
 // as a request for me to sing
 
-function App({songData}) {
-
-  
+function App() {
 
   return (
     <div>
@@ -36,7 +36,7 @@ function App({songData}) {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/songrequests" element={<SongRequests songData={songData}/>} />
+      <Route path="/songrequests" element={<SongRequests/>} />
     </Routes>
     </div>
    

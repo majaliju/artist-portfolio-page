@@ -1,7 +1,15 @@
-import React from "react";
-// import the songs from db.json
+import React, {useEffect} from "react";
 
 function SongRequests(){
+  // let [songData, setSongData] = useState(null);
+
+
+  // pull our list of songs from db.json
+  useEffect (() => {
+    fetch("http://localhost:3000/songs")
+    .then((r) => r.json())
+    .then((songs) => console.log(songs))
+  })
 // map each element then create a list for each element 
 
 // songData.map(() => <li>{}</li>)
