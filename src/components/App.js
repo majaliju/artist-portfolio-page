@@ -25,17 +25,20 @@ Add some styling: you're encouraged to write your CSS from scratch, either by us
 // db.json file holds the actual artist-name and song-title name
 // as a request for me to sing
 
-function App() {
+function App({songData}) {
+
+  
+
   return (
-    <BrowserRouter>
+    <div>
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/songrequests" element={<SongRequests />} />
+      <Route path="/songrequests" element={<SongRequests songData={songData}/>} />
     </Routes>
-    </BrowserRouter>
+    </div>
    
   );
 }
