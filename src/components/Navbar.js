@@ -1,18 +1,25 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function Navbar(){
   return (
     <div>
       <ul>
       <li><NavLink to="/Home" exact>
-        Home
+      <Button variant="outlined" href="#outlined-buttons">
+          Home
+      </Button>
       </NavLink></li>
       <li><NavLink to="/About" exact>
-        About 
+      <Button variant="outlined" href="#outlined-buttons">
+        About
+      </Button>
       </NavLink></li>
       <li><NavLink to="/SongRequests" exact>
-        Song Requests 
+      <Button variant="outlined" href="#outlined-buttons">
+          SongRequests
+      </Button>
       </NavLink></li>
     </ul>
     <h1>MAJ ALIJU</h1>
