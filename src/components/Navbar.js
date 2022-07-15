@@ -14,14 +14,16 @@ function Navbar() {
     <Tabs>
       <TabList>
         <Tab>
-          <Text
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            bgClip="text"
-            fontSize="1xl"
-            fontWeight="extrathin"
-          >
-            MAJ ALIJU
-          </Text>
+          <NavLink to="/HOME" exact>
+            <Text
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontSize="1xl"
+              fontWeight="extrathin"
+            >
+              MAJ ALIJU
+            </Text>
+          </NavLink>
         </Tab>
         <Tab>
           <NavLink to="/About" exact>

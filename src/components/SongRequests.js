@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import SongSubmissionForm from "./SongSubmissionForm";
+import SongForm from "./SongForm";
 
 function SongRequests(){
   // create a state for the song requests
@@ -25,7 +25,7 @@ function SongRequests(){
     <div>
       <h3>HERE IS WHERE WE DISPLAY OUR SONG REQUESTS</h3>
       <h3>SUBMIT A SONG!</h3>
-      <SongSubmissionForm />
+      <SongForm songData={songData} setSongData={setSongData}/>
 
     </div>
   )

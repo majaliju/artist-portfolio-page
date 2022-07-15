@@ -10,7 +10,7 @@ function Home(){
           fontSize='2xl'
           fontWeight='extrabold'
         >
-          this is the home page
+          THE OFFICIAL SITE OF MUSIC ARTIST MAJ ALIJU
         </Text>
     </div>
   )
