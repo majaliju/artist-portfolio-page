@@ -34,6 +34,7 @@ Add some styling: you're encouraged to write your CSS from scratch, either by us
 function App() {
 
 
+
   return (
     <ChakraProvider>
     <Navbar />

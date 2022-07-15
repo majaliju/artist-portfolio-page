@@ -14,7 +14,7 @@ function Navbar() {
     <Tabs>
       <TabList>
         <Tab>
-          <NavLink to="/HOME" exact>
+          <NavLink to="/Home" exact>
             <Text
               bgGradient="linear(to-l, #7928CA, #FF0080)"
               bgClip="text"

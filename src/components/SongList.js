@@ -1,16 +1,16 @@
 import React from "react";
 
-function SongList(songs){
+function SongList(songData){
 
-  for (const {artistName, songName} in songs){
-    console.log("The artist is: ", `${songs.artistName}`)
-  }
+  console.log("songData in songList: ", songData)
+
+  // songData.map(song => <li key={songData.id}>{songData.artistName}</li>)
 
   // songsToCover.map((song) => {
   //   <ul>
   //   <li>
   //     Artist Name: {song.artistName}
-  //   </li>
+  //   </li>songData
   //   </ul>
   // })
 

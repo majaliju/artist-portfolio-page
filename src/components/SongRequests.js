@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SongForm from "./SongForm";
 import SongList from "./SongList";
-import {Divider} from "@chakra-ui/react"
+import { Divider } from "@chakra-ui/react";
 
 function SongRequests() {
   // create a state for the song requests
@@ -20,18 +20,17 @@ function SongRequests() {
       .then((songs) => setSongData([...songData, songs]));
   }, []);
 
-
-// newSong is registering the newSong
+  // newSong is registering the newSong
   function handleSubmit(newSong) {
     fetch("http://localhost:3000/songs", {
       method: "POST",
       headers: {
-        'Content-Type' : 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(),
     })
-    .then((r) => r.json())
-    .then((newSong) => setSongData([...songData, newSong]))
+      .then((r) => r.json())
+      .then((newSong) => setSongData([...songData, newSong]));
   }
 
   // map each element then create a list for each element
@@ -42,19 +41,11 @@ function SongRequests() {
 
   return (
     <div>
-      <SongForm
-        onSubmit={handleSubmit}
-        form = {form}
-        setForm = {setForm}
-      />
+      <SongForm onSubmit={handleSubmit} form={form} setForm={setForm} />
       <Divider />
-      <SongList 
-        songs = {songData}
-        setSongData={setSongData}
-      />
+      <SongList songData={songData} setSongData={setSongData} />
     </div>
   );
-
-  }
+}
 
 export default SongRequests;
