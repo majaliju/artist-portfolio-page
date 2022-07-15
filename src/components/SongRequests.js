@@ -13,6 +13,9 @@ function SongRequests(){
     .then((songs) => setSongData([...songData, songs]))
   }, [])
 
+  function handleSubmit(){
+    console.log("testing handleSubmit")
+  }
 
 // map each element then create a list for each element 
 // songData.map(() => <li>{}</li>)
@@ -23,10 +26,7 @@ function SongRequests(){
 
   return (
     <div>
-      <h3>HERE IS WHERE WE DISPLAY OUR SONG REQUESTS</h3>
-      <h3>SUBMIT A SONG!</h3>
-      <SongForm songData={songData} setSongData={setSongData}/>
-
+      <SongForm songData={songData} setSongData={setSongData} onSubmit={handleSubmit}/>
     </div>
   )
 }

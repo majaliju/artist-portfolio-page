@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import {
   FormControl,
   FormLabel,
-  FormHelperText,
   Input,
   SimpleGrid,
   Box,
   Center,
-  Text
+  Text,
+  Button,
 } from "@chakra-ui/react";
 
-function SongForm() {
+function SongForm({onSubmit}) {
   const [form, setForm] = useState({
     artistName: "",
     songTitle: "",
@@ -20,10 +20,11 @@ function SongForm() {
     <>
     <Box>
       <Center>
-        <Text fontSize="3x1">Enter a song you'd like to see covered!</Text>
+        <Text fontSize="2xl">I'm always looking for new songs to cover!</Text>
       </Center>
     </Box>
-      <SimpleGrid>
+    <SimpleGrid columns={3} spacing={20}>
+      <Box>
         <FormControl>
           <FormLabel htmlFor="artistName">Artist/Band Name</FormLabel>
           <Input
@@ -37,16 +38,21 @@ function SongForm() {
               });
             }}
           />
-          <FormHelperText>Which artist or band?</FormHelperText>
         </FormControl>
+        </Box>
       </SimpleGrid>
-      <SimpleGrid>
+      <SimpleGrid columns={3} spacing={20}>
+        <Box>
         <FormControl>
           <FormLabel htmlFor="songName">Song Name</FormLabel>
           <Input id="songName" type="songName" />
-          <FormHelperText>Enter the name of the song!</FormHelperText>
         </FormControl>
+        </Box>
       </SimpleGrid>
+
+      <Button onClick={onSubmit}>
+        submit!
+      </Button>
     </>
   );
 }
