@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SongForm from "./SongForm";
 import SongList from "./SongList";
+import {Divider} from "@chakra-ui/react"
 
 function SongRequests() {
   // create a state for the song requests
@@ -46,8 +47,9 @@ function SongRequests() {
         form = {form}
         setForm = {setForm}
       />
+      <Divider />
       <SongList 
-        songData = {songData}
+        songs = {songData}
         setSongData={setSongData}
       />
     </div>
