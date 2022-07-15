@@ -3,20 +3,17 @@
     {
       "id": 1,
       "artistName": "Usher",
-      "songName": "U Remind Me",
-      "likes" : 5
+      "songName": "U Remind Me"
     },
     {
       "id": 2,
       "artistName": "Hall and Oates",
-      "songName": "Sara Smile",
-      "likes" : 8
+      "songName": "Sara Smile"
     },
     {
       "id": 3,
       "artistName": "David Bowie",
-      "songName": "Fascination",
-      "likes" : 4
+      "songName": "Fascination"
     }
   ]
 }

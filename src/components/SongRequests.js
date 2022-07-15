@@ -8,7 +8,7 @@ function SongRequests() {
   // create a state for the form we need, within SongForm
   const [form, setForm] = useState({
     artistName: "",
-    songTitle: "",
+    songName: "",
   });
 
   // update state with our list of songs
@@ -18,8 +18,19 @@ function SongRequests() {
       .then((songs) => setSongData([...songData, songs]));
   }, []);
 
+
   function handleSubmit() {
-    console.log("form: ", form);
+    fetch("http://localhost:3000/songs", {
+      method: "POST",
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(),
+    })
+    .then((r) => r.json())
+    .then((data) => console.log(data))
+
+
   }
 
   // map each element then create a list for each element
