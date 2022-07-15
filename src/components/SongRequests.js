@@ -19,6 +19,10 @@ function SongRequests() {
   }, []);
 
 
+  // current error in handleSubmit is that it prints
+  // to the db.json, but only the ID
+  // no actual artistName or songName
+
   function handleSubmit() {
     fetch("http://localhost:3000/songs", {
       method: "POST",
@@ -28,9 +32,7 @@ function SongRequests() {
       body: JSON.stringify(),
     })
     .then((r) => r.json())
-    .then((data) => console.log(data))
-
-
+    .then((newSong) => setSongData([...songData, newSong]))
   }
 
   // map each element then create a list for each element
@@ -46,8 +48,10 @@ function SongRequests() {
         form = {form}
         setForm = {setForm}
       />
+      <SongsList />
     </div>
   );
-}
+
+  }
 
 export default SongRequests;
