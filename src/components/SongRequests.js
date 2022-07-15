@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SongForm from "./SongForm";
+import SongList from "./SongList";
 
 function SongRequests() {
   // create a state for the song requests
@@ -19,11 +20,8 @@ function SongRequests() {
   }, []);
 
 
-  // current error in handleSubmit is that it prints
-  // to the db.json, but only the ID
-  // no actual artistName or songName
-
-  function handleSubmit() {
+// newSong is registering the newSong
+  function handleSubmit(newSong) {
     fetch("http://localhost:3000/songs", {
       method: "POST",
       headers: {
@@ -48,7 +46,10 @@ function SongRequests() {
         form = {form}
         setForm = {setForm}
       />
-      <SongsList />
+      <SongList 
+        songData = {songData}
+        setSongData={setSongData}
+      />
     </div>
   );
 

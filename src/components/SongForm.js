@@ -13,6 +13,14 @@ import {
 
 function SongForm({onSubmit, form, setForm}) {
 
+
+  // via the consoleLogger test
+  // form is retaining the values we intend (artistName & songName)
+  // however, it isn't passing the values above
+  function consoleLogger(){
+    return console.log("form: ", form)
+  }
+
   return (
     <>
     <Box>
@@ -66,3 +74,4 @@ function SongForm({onSubmit, form, setForm}) {
 }
 
 export default SongForm;
+

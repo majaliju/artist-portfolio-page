@@ -1,6 +1,11 @@
 import React from "react";
 import { Text } from '@chakra-ui/react'
 
+
+/* on home page, we're going to display my current
+video (MYB) plus links to social media */
+
+
 function Home(){
   return (
     <div>
