@@ -8,13 +8,10 @@ import {
   Center,
   Text,
   Button,
+  Divider
 } from "@chakra-ui/react";
 
-function SongForm({onSubmit}) {
-  const [form, setForm] = useState({
-    artistName: "",
-    songTitle: "",
-  });
+function SongForm({onSubmit, form, setForm}) {
 
   return (
     <>
@@ -22,6 +19,7 @@ function SongForm({onSubmit}) {
       <Center>
         <Text fontSize="2xl">I'm always looking for new songs to cover!</Text>
       </Center>
+      <Divider />
     </Box>
     <SimpleGrid columns={3} spacing={20}>
       <Box>
@@ -45,7 +43,17 @@ function SongForm({onSubmit}) {
         <Box>
         <FormControl>
           <FormLabel htmlFor="songName">Song Name</FormLabel>
-          <Input id="songName" type="songName" />
+          <Input
+            id="songName"
+            type="songName"
+            value={form.songName}
+            onChange={(e) => {
+              setForm({
+                ...form,
+                songName: e.target.value,
+              });
+            }}
+          />
         </FormControl>
         </Box>
       </SimpleGrid>
