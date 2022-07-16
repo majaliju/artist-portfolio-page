@@ -31,7 +31,7 @@ function SongForm({ onSubmit, form, setForm }) {
             <FormLabel htmlFor="artistName">Artist/Band Name</FormLabel>
             <Input
               id="artistName"
-              type="artistName"
+              type="text"
               value={form.artistName}
               onChange={(e) => {
                 setForm({
@@ -49,7 +49,7 @@ function SongForm({ onSubmit, form, setForm }) {
             <FormLabel htmlFor="songName">Song Name</FormLabel>
             <Input
               id="songName"
-              type="songName"
+              type="text"
               value={form.songName}
               onChange={(e) => {
                 setForm({
@@ -63,7 +63,7 @@ function SongForm({ onSubmit, form, setForm }) {
       </SimpleGrid>
 
     c
-      <Button onClick={onSubmit}>submit!</Button>
+      <Button onClick={onSubmit(form)}>submit!</Button>
     </>
   );
 }
@@ -72,4 +72,4 @@ export default SongForm;
 
   // replaced onSubmit with consoleLogger to test
       // if form is the proper value
-      // form is properly being updated with the right values
+      // form is properly being updated with the right values /  

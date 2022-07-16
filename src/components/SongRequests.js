@@ -29,7 +29,7 @@ function SongRequests() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newSong),
-    })
+    }) 
       .then((r) => r.json())
       .then((newSong) => setSongData([...songData, newSong]));
   }
@@ -38,7 +38,7 @@ function SongRequests() {
     <div>
       <SongForm onSubmit={handleSubmit} form={form} setForm={setForm} />
       <Divider />
-      <SongList songData={songData} setSongData={setSongData} />
+      <SongList songData={songData} />
     </div>
   );
 }
