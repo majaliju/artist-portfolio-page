@@ -4,16 +4,9 @@ function SongList(songData){
 
   console.log("songData in songList: ", songData)
 
-  // songData.map(song => <li key={songData.id}>{songData.artistName}</li>)
 
-  // songsToCover.map((song) => {
-  //   <ul>
-  //   <li>
-  //     Artist Name: {song.artistName}
-  //   </li>songData
-  //   </ul>
-  // })
-
+  // can't use map on songData due to it not being an array
+  // gotta figure out way to map elements into a list
 
   // map each element then create a list for each element
   // songData.map(() => <li>{}</li>)
@@ -31,3 +24,16 @@ function SongList(songData){
 }
 
 export default SongList;
+
+
+
+
+  // songData.map(song => <li key={songData.id}>{songData.artistName}</li>)
+
+  // songsToCover.map((song) => {
+  //   <ul>
+  //   <li>
+  //     Artist Name: {song.artistName}
+  //   </li>songData
+  //   </ul>
+  // })

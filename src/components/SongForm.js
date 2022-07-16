@@ -12,13 +12,11 @@ import {
 } from "@chakra-ui/react";
 
 function SongForm({ onSubmit, form, setForm }) {
-  
   function consoleLogger() {
     return console.log("form: ", form);
   }
 
   return (
-
     /* make the form entries right-hand leaning (for mobile users) */
     <>
       <Box>
@@ -64,7 +62,9 @@ function SongForm({ onSubmit, form, setForm }) {
         </Box>
       </SimpleGrid>
 
-
+      // replaced onSubmit with consoleLogger to test
+      // if form is the proper value
+      // form is properly being updated with the right values
       <Button onClick={onSubmit}>submit!</Button>
     </>
   );

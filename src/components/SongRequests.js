@@ -20,7 +20,8 @@ function SongRequests() {
       .then((songs) => setSongData([...songData, songs]));
   }, []);
 
-  // newSong is registering the newSong
+  // newSong is registering the newSong after receiving it 
+  // from SongForm --> form = newSong
   function handleSubmit(newSong) {
     fetch("http://localhost:3000/songs", {
       method: "POST",
@@ -32,12 +33,6 @@ function SongRequests() {
       .then((r) => r.json())
       .then((newSong) => setSongData([...songData, newSong]));
   }
-
-  // map each element then create a list for each element
-  // songData.map(() => <li>{}</li>)
-
-  // create a form for users to enter a song
-  // send that information to the server
 
   return (
     <div>
