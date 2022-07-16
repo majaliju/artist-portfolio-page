@@ -1,24 +1,12 @@
 import React from "react";
 
-function SongList(songData){
-
-  console.log("songData in songList: ", songData)
-
-
-  // can't use map on songData due to it not being an array
-  // gotta figure out way to map elements into a list
-
-  // map each element then create a list for each element
-  // songData.map(() => <li>{}</li>)
-
-  // create a form for users to enter a song
-  // send that information to the server
-
-
+function SongList({songData, setSongData}){
 
   return (
     <div>
-      <h3>SONGS LIST</h3>
+      {songData.map((song) => 
+      <li key={songData.id}>{songData.artistName}: "{songData.songName}"</li>
+      )}
     </div>
   )
 }

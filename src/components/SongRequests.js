@@ -5,7 +5,7 @@ import { Divider } from "@chakra-ui/react";
 
 function SongRequests() {
   // create a state for the song requests
-  let [songData, setSongData] = useState([]);
+  const [songData, setSongData] = useState([]);
 
   // create a state for the form we need, within SongForm
   const [form, setForm] = useState({
@@ -13,7 +13,7 @@ function SongRequests() {
     songName: "",
   });
 
-  // update state with our list of songs
+  // update state with our initial list of songs
   useEffect(() => {
     fetch("http://localhost:3000/songs")
       .then((r) => r.json())
@@ -28,7 +28,7 @@ function SongRequests() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(),
+      body: JSON.stringify(newSong),
     })
       .then((r) => r.json())
       .then((newSong) => setSongData([...songData, newSong]));

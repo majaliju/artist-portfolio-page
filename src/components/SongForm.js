@@ -62,12 +62,14 @@ function SongForm({ onSubmit, form, setForm }) {
         </Box>
       </SimpleGrid>
 
-      // replaced onSubmit with consoleLogger to test
-      // if form is the proper value
-      // form is properly being updated with the right values
+    c
       <Button onClick={onSubmit}>submit!</Button>
     </>
   );
 }
 
 export default SongForm;
+
+  // replaced onSubmit with consoleLogger to test
+      // if form is the proper value
+      // form is properly being updated with the right values
