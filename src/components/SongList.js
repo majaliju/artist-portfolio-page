@@ -15,6 +15,13 @@ function SongList(songData){
   // })
 
 
+  // map each element then create a list for each element
+  // songData.map(() => <li>{}</li>)
+
+  // create a form for users to enter a song
+  // send that information to the server
+
+
 
   return (
     <div>
