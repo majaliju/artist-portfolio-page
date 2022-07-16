@@ -34,9 +34,7 @@ function SongForm({ onSubmit, form, setForm }) {
               type="text"
               value={form.artistName}
               onChange={(e) => {
-                setForm({
-                  ...form,
-                  artistName: e.target.value,
+                setForm({...form, artistName: e.target.value,
                 });
               }}
             />
@@ -52,9 +50,7 @@ function SongForm({ onSubmit, form, setForm }) {
               type="text"
               value={form.songName}
               onChange={(e) => {
-                setForm({
-                  ...form,
-                  songName: e.target.value,
+                setForm({...form, songName: e.target.value,
                 });
               }}
             />
@@ -63,7 +59,7 @@ function SongForm({ onSubmit, form, setForm }) {
       </SimpleGrid>
 
     c
-      <Button onClick={onSubmit(form)}>submit!</Button>
+      <Button onClick={consoleLogger()}>submit!</Button>
     </>
   );
 }
