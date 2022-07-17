@@ -7,8 +7,9 @@ function SongRequests() {
   // create a state for the song requests
   const [songData, setSongData] = useState([]);
 
-  // create a state for the form we need, within SongForm
-  const [form, setForm] = useState({
+  // create a state for the user-inputted newSong
+  // that will come via SongForm
+  const [newSong, setNewSong] = useState({
     artistName: "",
     songName: "",
   });
@@ -21,22 +22,21 @@ function SongRequests() {
   }, []);
 
   // newSong is registering the newSong after receiving it 
-  // from SongForm --> form = newSong
-  function postInputSong(newSong) {
+  function postInputSong(newInputSong) {
     fetch("http://localhost:3000/songs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newSong),
+      body: JSON.stringify(newInputSong),
     }) 
       .then((r) => r.json())
-      .then((newSong) => setSongData([...songData, newSong]));
+      .then((newInputSong) => setSongData([...songData, newInputSong]));
   }
 
   return (
     <div>
-      <SongForm onSubmit={postInputSong} form={form} setForm={setForm} />
+      <SongForm onSubmit={postInputSong} newSong={newSong} setNewSong={setNewSong} />
       <Divider />
       <SongList songData={songData} />
     </div>

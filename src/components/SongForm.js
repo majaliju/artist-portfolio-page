@@ -11,13 +11,23 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-function SongForm({ onSubmit, form, setForm }) {
+function SongForm({ onSubmit, newSong, setNewSong }) {
+
+  const [form, setForm] = useState({
+    artistName: "",
+    songName: "",
+  });
+
+
+  // just to test the value of form
   function consoleLogger() {
-    return console.log("form: ", form);
+    return console.log("SongForm -> form: ", form);
   }
 
   consoleLogger();
 
+ 
+  // updates form with every keystroke
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -25,11 +35,13 @@ function SongForm({ onSubmit, form, setForm }) {
     })
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("e.target.value: ", [e.target.value])
     console.log("handleSubmit -> form: ", form);
-    // ... submit to API or something
+    console.log("handleSubmit -> newSong: ", newSong)
+    setNewSong(form)
+    onSubmit(newSong)
   };
 
 
@@ -68,7 +80,7 @@ function SongForm({ onSubmit, form, setForm }) {
           </FormControl>
         </Box>
       </SimpleGrid>
-      c<Button onClick={onSubmit}>submit!</Button>
+      c<Button onClick={handleSubmit}>submit!</Button>
     </>
   );
 }
