@@ -16,6 +16,23 @@ function SongForm({ onSubmit, form, setForm }) {
     return console.log("form: ", form);
   }
 
+  consoleLogger();
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.id]: e.target.value
+    })
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("e.target.value: ", [e.target.value])
+    console.log("handleSubmit -> form: ", form);
+    // ... submit to API or something
+  };
+
+
   return (
     /* make the form entries right-hand leaning (for mobile users) */
     <>
@@ -33,10 +50,7 @@ function SongForm({ onSubmit, form, setForm }) {
               id="artistName"
               type="text"
               value={form.artistName}
-              onChange={(e) => {
-                setForm({...form, artistName: e.target.value,
-                });
-              }}
+              onChange={handleChange}
             />
           </FormControl>
         </Box>
@@ -49,23 +63,15 @@ function SongForm({ onSubmit, form, setForm }) {
               id="songName"
               type="text"
               value={form.songName}
-              onChange={(e) => {
-                setForm({...form, songName: e.target.value,
-                });
-              }}
+              onChange={handleChange}
             />
           </FormControl>
         </Box>
       </SimpleGrid>
-
-    c
-      <Button onClick={onSubmit()}>submit!</Button>
+      c<Button onClick={onSubmit}>submit!</Button>
     </>
   );
 }
 
 export default SongForm;
 
-  // replaced onSubmit with consoleLogger to test
-      // if form is the proper value
-      // form is properly being updated with the right values /  

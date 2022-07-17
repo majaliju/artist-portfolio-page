@@ -22,7 +22,7 @@ function SongRequests() {
 
   // newSong is registering the newSong after receiving it 
   // from SongForm --> form = newSong
-  function handleSubmit(newSong) {
+  function postInputSong(newSong) {
     fetch("http://localhost:3000/songs", {
       method: "POST",
       headers: {
@@ -36,7 +36,7 @@ function SongRequests() {
 
   return (
     <div>
-      <SongForm onSubmit={handleSubmit} form={form} setForm={setForm} />
+      <SongForm onSubmit={postInputSong} form={form} setForm={setForm} />
       <Divider />
       <SongList songData={songData} />
     </div>
