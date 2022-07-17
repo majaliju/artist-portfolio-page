@@ -13,6 +13,8 @@ import {
 
 function SongForm({ onSubmit, newSong, setNewSong }) {
 
+  // this holds the values of form
+  // as it's being updated
   const [form, setForm] = useState({
     artistName: "",
     songName: "",
@@ -21,7 +23,8 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
 
   // just to test the value of form
   function consoleLogger() {
-    return console.log("SongForm -> form: ", form);
+      console.log("SongForm -> form: ", form)
+      console.log("SongForm -> newSong: ", newSong)
   }
 
   consoleLogger();
@@ -36,10 +39,14 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
   };
 
 
+  // handleSubmit for the button
+  // then sends the information up to SongRequests
+  // where it is POSTed to db.json and 
+  // updating the songData state variable
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log("handleSubmit -> form: ", form);
-    console.log("handleSubmit -> newSong: ", newSong)
+    console.log("handleSubmit -> newSong pre-state-assign: ", newSong)
     setNewSong(form)
     onSubmit(newSong)
   };

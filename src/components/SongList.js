@@ -5,7 +5,7 @@ function SongList({songData}){
   return (
     <div>
       {songData.map((song) => 
-      <li key={songData.id}>{songData.artistName}: "{songData.songName}"</li>
+      <li key={songData.id}>"{songData.songName}" by {songData.artistName}</li>
       )}
     </div>
   )
@@ -13,15 +13,3 @@ function SongList({songData}){
 
 export default SongList;
 
-
-
-
-  // songData.map(song => <li key={songData.id}>{songData.artistName}</li>)
-
-  // songsToCover.map((song) => {
-  //   <ul>
-  //   <li>
-  //     Artist Name: {song.artistName}
-  //   </li>songData
-  //   </ul>
-  // })
