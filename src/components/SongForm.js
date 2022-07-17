@@ -6,6 +6,7 @@ import {
   SimpleGrid,
   Box,
   Center,
+  Flex,
   Text,
   Button,
   Divider,
@@ -54,15 +55,15 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
 
   return (
     /* make the form entries right-hand leaning (for mobile users) */
+
+    /* have to handle proper styling later on -- add margins to side and design it well */
     <>
       <Box>
-        <Center>
-          <Text fontSize="2xl">I'm always looking for new songs to cover!</Text>
-        </Center>
+          <Text fontSize="2xl" direction="rtl">I'm always looking for new songs to cover!</Text>
         <Divider />
       </Box>
-      <SimpleGrid columns={3} spacing={20}>
-        <Box>
+      <SimpleGrid >
+        <Flex>
           <FormControl>
             <FormLabel htmlFor="artistName">Artist/Band Name</FormLabel>
             <Input
@@ -72,9 +73,9 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
               onChange={handleChange}
             />
           </FormControl>
-        </Box>
+        </Flex>
       </SimpleGrid>
-      <SimpleGrid columns={3} spacing={20}>
+      <SimpleGrid >
         <Box>
           <FormControl>
             <FormLabel htmlFor="songName">Song Name</FormLabel>

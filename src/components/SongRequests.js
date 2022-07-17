@@ -15,7 +15,7 @@ function SongRequests() {
   });
 
   function consoleLogger(){
-    console.log("(A3) SongRequests -> SongData: ", songData)
+    console.log("(A1) SongRequests -> SongData: ", songData)
   }
 
   consoleLogger();
