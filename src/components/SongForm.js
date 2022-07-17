@@ -59,7 +59,7 @@ function SongForm({ onSubmit, form, setForm }) {
       </SimpleGrid>
 
     c
-      <Button onClick={consoleLogger()}>submit!</Button>
+      <Button onClick={onSubmit()}>submit!</Button>
     </>
   );
 }

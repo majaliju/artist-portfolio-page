@@ -1,6 +1,6 @@
 import React from "react";
 
-function SongList({songData, setSongData}){
+function SongList({songData}){
 
   return (
     <div>
