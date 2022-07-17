@@ -23,8 +23,8 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
 
   // just to test the value of form
   function consoleLogger() {
-      console.log("SongForm -> form: ", form)
-      console.log("SongForm -> newSong: ", newSong)
+      console.log("(A2) SongForm -> form: ", form)
+      console.log("(A3) SongForm -> newSong: ", newSong)
   }
 
   consoleLogger();
@@ -45,8 +45,8 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
   // updating the songData state variable
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("handleSubmit -> form: ", form);
-    console.log("handleSubmit -> newSong pre-state-assign: ", newSong)
+    console.log("(B1) handleSubmit -> form: ", form);
+    console.log("(B2) handleSubmit -> newSong pre-state-assign: ", newSong)
     setNewSong(form)
     onSubmit(newSong)
   };

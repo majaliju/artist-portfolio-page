@@ -14,6 +14,12 @@ function SongRequests() {
     songName: "",
   });
 
+  function consoleLogger(){
+    console.log("(A3) SongRequests -> SongData: ", songData)
+  }
+
+  consoleLogger();
+
   // update state with our initial list of songs
   useEffect(() => {
     fetch("http://localhost:3000/songs")
