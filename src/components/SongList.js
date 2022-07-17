@@ -5,7 +5,7 @@ function SongList({songData}){
   return (
     <div>
       {songData.map((song) => 
-      <li key={songData.id}>"{songData.songName}" by {songData.artistName}</li>
+      <li key={song.id}>"{song.songName}" by {song.artistName}</li>
       )}
     </div>
   )
