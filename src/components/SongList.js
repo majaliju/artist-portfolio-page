@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 
-function SongList({songData}){
+function SongList({songData, setSongData}){
 
-  function consoleLogger(){
-    console.log("(E5) SongList -> songData: ", songData)
-  }
+    // update state with our initial list of songs
+    useEffect(() => {
+      fetch("http://localhost:3000/songs")
+        .then((r) => r.json())
+        .then((songs) => setSongData([...songData, songs]));
+    }, []);
 
   return (
     <div>

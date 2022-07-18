@@ -12,24 +12,13 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-function SongForm({ onSubmit, newSong, setNewSong }) {
+function SongForm({ onSubmit }) {
 
-  // this holds the values of form
-  // as it's being updated
+  // this holds the values of form as it's being updated
   const [form, setForm] = useState({
     artistName: "",
     songName: "",
   });
-
-
-  // just to test the value of form
-  function consoleLogger() {
-      console.log("(A2) SongForm -> form: ", form)
-      console.log("(A3) SongForm -> newSong: ", newSong)
-  }
-
-  consoleLogger();
-
  
   // updates form with every keystroke
   const handleChange = (e) => {
@@ -39,17 +28,11 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
     })
   };
 
-
-  // handleSubmit for the button
-  // then sends the information up to SongRequests
-  // where it is POSTed to db.json and 
-  // updating the songData state variable
+  // handleSubmit for the button, sends it up to SongRequests 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log("(B1) handleSubmit -> form: ", form);
-    console.log("(B2) handleSubmit -> newSong pre-state-assign: ", newSong)
-    setNewSong(form)
-    onSubmit(newSong)
+    onSubmit(form)
   };
 
 
