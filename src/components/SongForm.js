@@ -12,7 +12,13 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-function SongForm({ onSubmit, newSong, setNewSong }) {
+function SongForm({ onSubmit }) {
+
+   // create a state for the user-inputted newSong
+  const [newSong, setNewSong] = useState({
+    artistName: "",
+    songName: "",
+  });
 
   // this holds the values of form
   // as it's being updated
@@ -39,6 +45,10 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
     })
   };
 
+  function assignFormToNewSong(){
+    setNewSong(form);
+  }
+
 
   // handleSubmit for the button
   // then sends the information up to SongRequests
@@ -48,7 +58,7 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
     e.preventDefault()
     console.log("(B1) handleSubmit -> form: ", form);
     console.log("(B2) handleSubmit -> newSong pre-state-assign: ", newSong)
-    setNewSong(form)
+    assignFormToNewSong(form)
     onSubmit(newSong)
   };
 
