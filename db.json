@@ -1,34 +1,19 @@
 {
   "songs": [
     {
-      "id": 1,
       "artistName": "Usher",
-      "songName": "U Remind Me"
+      "songName": "U Remind Me",
+      "id": 1
     },
     {
-      "id": 2,
       "artistName": "Hall and Oates",
-      "songName": "Sara Smile"
+      "songName": "Sara Smile",
+      "id" : 2
     },
     {
-      "id": 3,
       "artistName": "David Bowie",
-      "songName": "Fascination"
-    },
-    {
-      "artistName": "Marvin Gaye",
-      "songName": "Distant Lover",
-      "id": 4
-    },
-    {
-      "artistName": "Strokes",
-      "songName": "1251",
-      "id": 5
-    },
-    {
-      "artistName": "Marvin Gaye",
-      "songName": "Distant Lover",
-      "id": 6
+      "songName": "Fascination",
+      "id" : 3
     }
   ]
 }
