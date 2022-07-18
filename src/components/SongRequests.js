@@ -17,8 +17,7 @@ function SongRequests() {
   useEffect(() => {
     fetch("http://localhost:3000/songs")
       .then((r) => r.json())
-      .then((songs) => setSongData([...songData, songs]));
-      // .then((songs) => setSongData([...songData, songs]));
+      .then((songs) => setSongData(songs))
   }, []);
 
   // receives song from SongForm, then POSTS it
@@ -31,7 +30,9 @@ function SongRequests() {
       body: JSON.stringify(newSong),
     }) 
       .then((r) => r.json())
-      .then((newSong) => setSongData(songData => [...songData, newSong]));
+      .then((inputtedSong) =>{
+        setSongData(songData => [...songData, inputtedSong])
+      } );
 
       
   }
@@ -40,7 +41,11 @@ function SongRequests() {
     <div>
       <SongForm onSubmit={postNewSong} />
       <Divider />
-      <SongList songData={songData} />
+      <div>
+      {songData.map((song) => 
+      <li key={song.id}>"{song.songName}" by {song.artistName}</li>
+      )}
+    </div>
     </div>
   );
 }
