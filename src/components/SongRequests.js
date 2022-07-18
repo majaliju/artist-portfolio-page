@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import SongForm from "./SongForm";
-import SongList from "./SongList";
 import { Divider } from "@chakra-ui/react";
 
 function SongRequests() {
   // create a state for the song requests
   const [songData, setSongData] = useState([]);
 
-  function consoleLogger(){
-    console.log("songData: ", songData)
-  }
-
-  consoleLogger();
+  console.log("songData :", songData)
 
   // update state with our initial list of songs
   useEffect(() => {
@@ -33,9 +28,9 @@ function SongRequests() {
       .then((inputtedSong) =>{
         setSongData(songData => [...songData, inputtedSong])
       } );
-
-      
   }
+
+  /* idea for a duplicate checker to ensure there's no duplicates */
 
   return (
     <div>

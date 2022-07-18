@@ -28,9 +28,6 @@ You should keep your json-server data simple: avoid nested data and associations
 Add some styling: you're encouraged to write your CSS from scratch, either by using styled components or writing CSS files and using id/className to style your elements. You can also incorporate a UI framework (like React Bootstrap, Semantic UI, or Material UI) if you prefer.
 */
 
-// add a song requests components
-// db.json file holds the actual artist-name and song-title name
-// as a request for me to sing
 
 function App() {
 
