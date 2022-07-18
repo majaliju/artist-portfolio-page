@@ -31,7 +31,6 @@ function SongForm({ onSubmit }) {
   // handleSubmit for the button, sends it up to SongRequests 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("(B1) handleSubmit -> form: ", form);
     onSubmit(form)
   };
 

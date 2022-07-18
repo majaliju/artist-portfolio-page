@@ -1,11 +1,17 @@
 import React from "react";
+import { Image, Heading, Center } from "@chakra-ui/react";
 
-function About(){
+function About() {
   return (
     <div>
-      <h2>HERE WE HAVE AN IMAGE AND AN BIO PAGE</h2>
+      <Center>
+        <Heading lineHeight="tall">Who is MAJ ALIJU?</Heading>
+      </Center>
+      <Center>
+        <Image boxSize="sm" src="/images/maj-dark-avy.jpg"></Image>
+      </Center>
     </div>
-  )
+  );
 }
 
 export default About;

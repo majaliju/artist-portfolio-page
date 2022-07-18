@@ -7,30 +7,38 @@ function SongRequests() {
   // create a state for the song requests
   const [songData, setSongData] = useState([]);
 
+  function consoleLogger(){
+    console.log("songData: ", songData)
+  }
+
+  consoleLogger();
 
   // update state with our initial list of songs
   useEffect(() => {
     fetch("http://localhost:3000/songs")
       .then((r) => r.json())
       .then((songs) => setSongData([...songData, songs]));
+      // .then((songs) => setSongData([...songData, songs]));
   }, []);
 
   // receives song from SongForm, then POSTS it
-  function postInputSong(newInputSong) {
+  function postNewSong(newSong) {
     fetch("http://localhost:3000/songs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newInputSong),
+      body: JSON.stringify(newSong),
     }) 
       .then((r) => r.json())
-      .then((newInputSong) => setSongData([...songData, newInputSong]));
+      .then((newSong) => setSongData(songData => [...songData, newSong]));
+
+      
   }
 
   return (
     <div>
-      <SongForm onSubmit={postInputSong} />
+      <SongForm onSubmit={postNewSong} />
       <Divider />
       <SongList songData={songData} />
     </div>
