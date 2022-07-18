@@ -7,6 +7,12 @@ function SongRequests() {
   // create a state for the song requests
   const [songData, setSongData] = useState([]);
 
+  // create a state for the user-inputted newSong
+  // that will come via SongForm
+  const [newSong, setNewSong] = useState({
+    artistName: "",
+    songName: "",
+  });
 
   function consoleLogger(){
     console.log("(A1) SongRequests -> SongData: ", songData)
@@ -36,7 +42,7 @@ function SongRequests() {
 
   return (
     <div>
-      <SongForm onSubmit={postInputSong} />
+      <SongForm onSubmit={postInputSong} newSong={newSong} setNewSong={setNewSong} />
       <Divider />
       <SongList songData={songData} />
     </div>

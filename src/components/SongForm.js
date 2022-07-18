@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 
 function SongForm({ onSubmit, newSong, setNewSong }) {
-  
 
   // this holds the values of form
   // as it's being updated
@@ -95,4 +94,3 @@ function SongForm({ onSubmit, newSong, setNewSong }) {
 }
 
 export default SongForm;
-
