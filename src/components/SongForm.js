@@ -13,27 +13,25 @@ import {
 } from "@chakra-ui/react";
 
 function SongForm({ onSubmit }) {
-
   // this holds the values of form as it's being updated
   const [form, setForm] = useState({
     artistName: "",
     songName: "",
   });
- 
+
   // updates form with every keystroke
   const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target.id]: e.target.value
-    })
+      [e.target.id]: e.target.value,
+    });
   };
 
-  // handleSubmit for the button, sends it up to SongRequests 
+  // handleSubmit for the button, sends it up to SongRequests
   const handleSubmit = (e) => {
-    e.preventDefault()
-    onSubmit(form)
+    e.preventDefault();
+    onSubmit(form);
   };
-
 
   return (
     /* make the form entries right-hand leaning (for mobile users) */
@@ -41,36 +39,43 @@ function SongForm({ onSubmit }) {
     /* have to handle proper styling later on -- add margins to side and design it well */
     <>
       <Box>
-          <Text fontSize="2xl" direction="rtl">I'm always looking for new songs to cover!</Text>
+        <Text fontSize="2xl" direction="rtl">
+          I'm always looking for new songs to cover!
+        </Text>
         <Divider />
       </Box>
-      <SimpleGrid >
+      <SimpleGrid>
         <Flex>
           <FormControl>
-            <FormLabel htmlFor="artistName">Artist/Band Name</FormLabel>
+            <FormLabel htmlFor="artistName"></FormLabel>
             <Input
               id="artistName"
               type="text"
+              variant="flushed"
+              placeholder="Artist/Band Name"
               value={form.artistName}
               onChange={handleChange}
             />
           </FormControl>
         </Flex>
       </SimpleGrid>
-      <SimpleGrid >
+      <SimpleGrid>
         <Box>
           <FormControl>
-            <FormLabel htmlFor="songName">Song Name</FormLabel>
+            <FormLabel htmlFor="songName"></FormLabel>
             <Input
               id="songName"
               type="text"
+              variant="flushed"
+              placeholder="Song Name"
               value={form.songName}
               onChange={handleChange}
             />
           </FormControl>
         </Box>
       </SimpleGrid>
-      c<Button onClick={handleSubmit}>submit!</Button>
+      <Button onClick={handleSubmit}
+      variant="ghost">submit!</Button>
     </>
   );
 }

@@ -7,7 +7,8 @@ import {
   Tab,
   TabPanel,
   Text,
-  useColorMode
+  useColorMode,
+  Button
 } from "@chakra-ui/react";
 
 /* add an element to toggle light/dark */
@@ -15,6 +16,7 @@ import {
 function Navbar() {
 
   // for the color changing Button
+  // changes Dark to Light and vice versa
   const { colorMode, toggleColorMode } = useColorMode()
 
 
@@ -58,9 +60,14 @@ function Navbar() {
           </NavLink>
         </Tab>
         <Tab>
-        <Button onClick={toggleColorMode}>
-          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-        </Button>
+        <Text 
+        bgGradient="linear(to-l, #7928CA, #FF0080)"
+        bgClip="text"
+        fontSize="1xl"
+        fontWeight="extrathin"
+        onClick={toggleColorMode}>
+          {colorMode === 'light' ? 'GO DARK' : 'GO LIGHT'}
+        </Text>
         </Tab>
       </TabList>
     </Tabs>

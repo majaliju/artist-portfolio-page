@@ -8,12 +8,17 @@
     {
       "artistName": "Hall and Oates",
       "songName": "Sara Smile",
-      "id" : 2
+      "id": 2
     },
     {
       "artistName": "David Bowie",
       "songName": "Fascination",
-      "id" : 3
+      "id": 3
+    },
+    {
+      "artistName": "Marvin Gaye",
+      "songName": "Distant Lover",
+      "id": 4
     }
   ]
 }
