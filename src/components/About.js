@@ -1,33 +1,50 @@
 import React from "react";
-import { Image, Heading, Center,Modal,
+import {
+  Image,
+  Heading,
+  Center,
+  Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalFooter,
-  ModalBody,Text, Button, useDisclosure } from "@chakra-ui/react";
+  ModalBody,
+  Text,
+  Button,
+  useDisclosure,
+  AspectRatio,
+} from "@chakra-ui/react";
 
 function About() {
-
   // for the modal
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <div>
-      <Heading lineHeight="tall">Who is MAJ ALIJU?</Heading>
-      <Image onClick={onOpen} boxSize="sm" src="/images/maj-dark-avy.jpg"></Image>
+      <Center borderRadius="4px">
+        <Heading lineHeight="tall">Who is MAJ ALIJU?</Heading>
+      </Center>
+      <Center>
+        <Image
+          onClick={onOpen}
+          boxSize="xs"
+          src="/images/maj-dark-avy.jpg"
+        />
+      </Center>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>TELL US MORE</ModalHeader>
+          <Center>
+            <ModalHeader>BIO</ModalHeader>
+          </Center>
           <ModalBody>
-            <Text>
-              Here is the story of my life yada yada yada
-            </Text>
+            <Center>
+              <Text>Here is the story of my life yada yada yada</Text>
+            </Center>
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="purple" mr={3} onClick={onClose}>
               EXIT
             </Button>
           </ModalFooter>
