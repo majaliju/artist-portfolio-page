@@ -39,10 +39,12 @@ function SongForm({ onSubmit }) {
     /* have to handle proper styling later on -- add margins to side and design it well */
     <>
       <Box>
-        <Text fontSize="2xl" direction="rtl">
-          I'm always looking for new songs to cover!
+        <Center>
+        <Text fontSize="2xl">
+          Add a song you'd like me to cover
         </Text>
-        <Divider />
+        </Center>
+        
       </Box>
       <SimpleGrid>
         <Flex>
@@ -76,9 +78,16 @@ function SongForm({ onSubmit }) {
           </FormControl>
         </Box>
       </SimpleGrid>
-      <Button onClick={handleSubmit} variant="outline" colorScheme="purple">
+      <Center>
+      <Button onClick={handleSubmit} 
+      borderRadius='md'
+      bgGradient='linear(to-r, teal.500, green.500)'
+      _hover={{
+        bgGradient: 'linear(to-r, red.500, yellow.500)',
+      }}>
         submit!
       </Button>
+      </Center>
     </>
   );
 }

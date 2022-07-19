@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Center, Box} from "@chakra-ui/react";
 
 /* on home page, we're going to display my current
 video (MYB) plus links to social media */
@@ -22,25 +22,29 @@ video (MYB) plus links to social media */
 
 function Home() {
   return (
-    <div>
+    <Box>
+      <Center>
       <Text
         bgGradient="linear(to-l, #7928CA, #FF0080)"
         bgClip="text"
-        fontSize="2xl"
-        fontWeight="extrabold"
+        fontSize="1xl"
+        fontWeight="bold"
       >
-        THE OFFICIAL SITE OF MUSIC ARTIST MAJ ALIJU
+        WELCOME!
       </Text>
+      </Center>
+      <Center>
       <iframe
         style={{ borderRadius: 12 }}
         src="https://open.spotify.com/embed/track/3UNEFsa2dtfM4AYfhg0xr9?utm_source=generator"
-        width="50%"
-        height={480}
+        width="full%"
+        height="full"
         frameBorder={0}
         allowFullScreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       />
-    </div>
+      </Center>
+    </Box>
   );
 }
 

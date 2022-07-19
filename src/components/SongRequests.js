@@ -3,7 +3,7 @@ import SongForm from "./SongForm";
 import {
   Divider,
   List,
-  ListItem
+  ListItem, Center, Text
 } from "@chakra-ui/react";
 
 
@@ -44,7 +44,10 @@ function SongRequests() {
       <List spacing={3}>
         {songData.map((song) => (
           <ListItem key={song.id}>
-            "{song.songName}" by {song.artistName}
+            <Center>
+              <Text > "{song.songName}" by {song.artistName}</Text>
+            </Center>
+           
           </ListItem>
         ))}
       </List>
