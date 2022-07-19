@@ -49,6 +49,7 @@ function SongForm({ onSubmit }) {
           <FormControl>
             <FormLabel htmlFor="artistName"></FormLabel>
             <Input
+              focusBorderColor="lime"
               id="artistName"
               type="text"
               variant="flushed"
@@ -64,6 +65,7 @@ function SongForm({ onSubmit }) {
           <FormControl>
             <FormLabel htmlFor="songName"></FormLabel>
             <Input
+              focusBorderColor="lime"
               id="songName"
               type="text"
               variant="flushed"
@@ -74,8 +76,9 @@ function SongForm({ onSubmit }) {
           </FormControl>
         </Box>
       </SimpleGrid>
-      <Button onClick={handleSubmit}
-      variant="ghost">submit!</Button>
+      <Button onClick={handleSubmit} variant="outline" colorScheme="purple">
+        submit!
+      </Button>
     </>
   );
 }
