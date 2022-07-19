@@ -40,8 +40,8 @@ function SongForm({ onSubmit }) {
     <>
       <Box>
         <Center>
-        <Text fontSize="2xl">
-          Add a song you'd like me to cover
+        <Text fontSize="xl" fontWeight="light" fontFamily="Helvetica">
+          ADD A SONG YOU'D LIKE ME TO COVER
         </Text>
         </Center>
         

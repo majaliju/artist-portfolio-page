@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
 import SongForm from "./SongForm";
-import {
-  Divider,
-  List,
-  ListItem, Center, Text
-} from "@chakra-ui/react";
-
+import { Divider, List, ListItem, Center, Text } from "@chakra-ui/react";
 
 function SongRequests() {
   // create a state for the song requests
   const [songData, setSongData] = useState([]);
-
-  console.log("songData :", songData);
 
   // update state with our initial list of songs
   useEffect(() => {
@@ -40,14 +33,15 @@ function SongRequests() {
   return (
     <div>
       <SongForm onSubmit={postNewSong} />
-      <Divider />
-      <List spacing={3}>
+
+      <List spacing={2}>
         {songData.map((song) => (
           <ListItem key={song.id}>
             <Center>
-              <Text > "{song.songName}" by {song.artistName}</Text>
+              <Text fontFamily="Helvetica" fontWeight="thin" fontStyle="italic">
+                {song.songName} by {song.artistName}
+              </Text>
             </Center>
-           
           </ListItem>
         ))}
       </List>
