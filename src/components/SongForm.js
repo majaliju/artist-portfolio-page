@@ -50,15 +50,17 @@ function SongForm({ onSubmit }) {
         <Flex>
           <FormControl>
             <FormLabel htmlFor="artistName"></FormLabel>
+            <Center>
             <Input
               focusBorderColor="lime"
               id="artistName"
               type="text"
               variant="flushed"
+              htmlSize={55} width='auto'
               placeholder="Artist/Band Name"
               value={form.artistName}
               onChange={handleChange}
-            />
+            /></Center>
           </FormControl>
         </Flex>
       </SimpleGrid>
@@ -66,15 +68,17 @@ function SongForm({ onSubmit }) {
         <Box>
           <FormControl>
             <FormLabel htmlFor="songName"></FormLabel>
+            <Center>
             <Input
               focusBorderColor="lime"
               id="songName"
               type="text"
               variant="flushed"
+              htmlSize={55} width='auto'
               placeholder="Song Name"
               value={form.songName}
               onChange={handleChange}
-            />
+            /></Center>
           </FormControl>
         </Box>
       </SimpleGrid>

@@ -15,11 +15,13 @@ import {
 
 function Navbar() {
 
-  // for the color changing Button
-  // changes Dark to Light and vice versa
+  // for the color changing Button, changes Dark to Light and vice versa
   const { colorMode, toggleColorMode } = useColorMode()
 
-  // 
+  // do a full gradient slope amongst the colors
+/*
+  color1 to color 2 for item 1,
+  color 2 to color 3 for item 2, etc */
 
 
   return (
@@ -41,7 +43,7 @@ function Navbar() {
         <Tab>
           <NavLink to="/About" exact>
             <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgGradient="linear(to-l, #FF0080, #FF0080)"
               bgClip="text"
               fontSize="1xl"
               fontWeight="extrathin"
