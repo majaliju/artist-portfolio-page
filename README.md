@@ -2,7 +2,6 @@
 
 <!-- <img src="https://img.shields.io/badge/phase2-project-blue?style=flat-square&logo=appveyor"> -->
 <img src="https://img.shields.io/badge/phase2-project-blue?style=flat-square&logo=appveyor">
-___
 
 ### READ-ME STILL IN PROGRESS
 
