@@ -10,7 +10,7 @@ As a musical artist (or a creative person in any endeavor), one needs a centrali
 I needed such a page for myself so I built a simple one, based on React!
 
 ## **WHERE?**
-[Click here to find an activity to do!](http://MAJALIJU.COM/im-bored)
+[placehold text here](actual url here)
 
 ## **TOOLS**
 It's very simple!
