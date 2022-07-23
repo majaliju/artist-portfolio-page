@@ -1,7 +1,7 @@
 # MUSIC ARITST PORTFOLIO for MAJ ALIJU
 
-<!-- <img src="https://img.shields.io/badge/phase2-project-blue?style=flat-square&logo=appveyor"> -->
-<img src="https://img.shields.io/badge/phase2-project-blue?style=flat-square&logo=appveyor">
+<!-- <img src="https://img.shields.io/badge/phase2-project-blue?style=flat-square&logo=react"> -->
+<img src="https://img.shields.io/badge/phase2-project-blue?style=flat-square&logo=react">
 
 ### READ-ME STILL IN PROGRESS
 
