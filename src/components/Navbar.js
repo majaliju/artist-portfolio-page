@@ -34,7 +34,7 @@ function Navbar() {
               bgGradient="linear(to-l, #7928CA, #FF0080)"
               bgClip="text"
               fontSize="1xl"
-              fontWeight="extrathin"
+              fontWeight="thin"
             >
               MAJ ALIJU
             </Text>
@@ -43,10 +43,10 @@ function Navbar() {
         <Tab>
           <NavLink to="/About" exact>
             <Text
-              bgGradient="linear(to-l, #FF0080, #FF0080)"
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
               bgClip="text"
               fontSize="1xl"
-              fontWeight="extrathin"
+              fontWeight="thin"
             >
               ABOUT ME
             </Text>
@@ -58,7 +58,7 @@ function Navbar() {
               bgGradient="linear(to-l, #7928CA, #FF0080)"
               bgClip="text"
               fontSize="1xl"
-              fontWeight="extrathin"
+              fontWeight="thin"
             >
               SONG REQUESTS
             </Text>
@@ -69,7 +69,7 @@ function Navbar() {
         bgGradient="linear(to-l, #7928CA, #FF0080)"
         bgClip="text"
         fontSize="1xl"
-        fontWeight="extrathin"
+        fontWeight="thin"
         onClick={toggleColorMode}>
           {colorMode === 'light' ? 'GO DARK' : 'GO LIGHT'}
         </Text>

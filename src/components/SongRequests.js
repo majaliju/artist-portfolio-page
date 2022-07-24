@@ -29,6 +29,8 @@ function SongRequests() {
   }
 
   /* idea for a duplicate checker to ensure there's no duplicates */
+  /* also implement a like counter so people can like the item */
+  /* also make sure "" and "" can't be submited -- pass an error if artistName or songName is empty */
 
   return (
     <div>
