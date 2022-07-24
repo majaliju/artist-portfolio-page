@@ -1,5 +1,13 @@
 import React from "react";
-import { Text, Center, Box, Button, ButtonGroup, Link, Icon } from "@chakra-ui/react";
+import {
+  Text,
+  Center,
+  Box,
+  Button,
+  ButtonGroup,
+  Link,
+  Icon,
+} from "@chakra-ui/react";
 import { FaSpotify, FaApple, FaYoutube, FaAngleDoubleUp } from "react-icons/fa";
 
 /* on home page, we're going to display my current
@@ -36,14 +44,14 @@ function Home() {
       </Center>
       <Center>
         <iframe
-          style={{ borderRadius: 12 }}
-          src="https://open.spotify.com/embed/track/3UNEFsa2dtfM4AYfhg0xr9?utm_source=generator"
-          width="full%"
-          height="full"
-          frameBorder={0}
-          allowFullScreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        />
+          width="360"
+          height="315"
+          src="https://www.youtube.com/embed/CCdInkRwWO0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </Center>
       <Center>
         <Text fontSize="1xl" fontWeight="thin">
@@ -52,25 +60,25 @@ function Home() {
       </Center>
       <Center>
         <ButtonGroup spacing={6}>
-        <Link href="https://open.spotify.com/track/3UNEFsa2dtfM4AYfhg0xr9?si=b479c118f5b74f65">
-          <Button size="lg" variant="ghost">
-            <FaSpotify />
-          </Button>
-          </Link>
           <Link href="https://open.spotify.com/track/3UNEFsa2dtfM4AYfhg0xr9?si=b479c118f5b74f65">
-          <Button size="lg" variant="ghost">
-            <FaApple />
-          </Button>
+            <Button size="lg" variant="ghost">
+              <FaSpotify />
+            </Button>
           </Link>
-          <Link href="https://open.spotify.com/track/3UNEFsa2dtfM4AYfhg0xr9?si=b479c118f5b74f65">
-          <Button size="lg" variant="ghost">
-            <FaYoutube />
-          </Button>
+          <Link href="https://music.apple.com/us/album/met-you-before-single/1630988278?uo=4&app=music&at=1001lry3&ct=dashboard">
+            <Button size="lg" variant="ghost">
+              <FaApple />
+            </Button>
           </Link>
-          <Link href="https://open.spotify.com/track/3UNEFsa2dtfM4AYfhg0xr9?si=b479c118f5b74f65">
-          <Button size="lg" variant="ghost">
-            <FaAngleDoubleUp />
-          </Button>
+          <Link href="https://www.youtube.com/watch?v=CCdInkRwWO0">
+            <Button size="lg" variant="ghost">
+              <FaYoutube />
+            </Button>
+          </Link>
+          <Link href="https://solo.to/majaliju">
+            <Button size="lg" variant="ghost">
+              <FaAngleDoubleUp />
+            </Button>
           </Link>
         </ButtonGroup>
       </Center>

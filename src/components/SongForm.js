@@ -9,7 +9,6 @@ import {
   Flex,
   Text,
   Button,
-  Divider,
 } from "@chakra-ui/react";
 
 function SongForm({ onSubmit }) {
@@ -34,9 +33,6 @@ function SongForm({ onSubmit }) {
   };
 
   return (
-    /* make the form entries right-hand leaning (for mobile users) */
-
-    /* have to handle proper styling later on -- add margins to side and design it well */
     <>
       <Box>
         <Center>
@@ -85,7 +81,7 @@ function SongForm({ onSubmit }) {
       <Center>
       <Button onClick={handleSubmit} 
       borderRadius='md'
-      bgGradient='linear(to-r, teal.500, green.500)'
+      bgGradient='linear(to-l, #7928CA, #FF0080)'
       _hover={{
         bgGradient: 'linear(to-r, red.500, yellow.500)',
       }}>

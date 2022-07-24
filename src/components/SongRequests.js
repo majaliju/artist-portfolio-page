@@ -40,8 +40,12 @@ function SongRequests() {
         {songData.map((song) => (
           <ListItem key={song.id}>
             <Center>
-              <Text fontFamily="Helvetica" fontWeight="thin" fontStyle="italic">
-                {song.songName} by {song.artistName}
+              <Text fontFamily="Helvetica" fontWeight="thin" fontStyle="italic"
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontSize="1xl"
+              fontWeight="thin">
+                "{song.songName}" by {song.artistName}
               </Text>
             </Center>
           </ListItem>
