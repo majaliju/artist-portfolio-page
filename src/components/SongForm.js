@@ -13,6 +13,31 @@ import {
 } from "@chakra-ui/react";
 
 function SongForm({ onSubmit }) {
+
+
+/*
+import React from 'react';
+import { useForm } from 'react-hook-form';
+
+export default function App() {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+  console.log(errors);
+  
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input type="text" placeholder="Artist/Band Name" {...register("Artist/Band Name", {required: true, maxLength: 80})} />
+      <input type="text" placeholder="Song Name" {...register("Song Name", {required: true, maxLength: 100})} />
+
+      <input type="submit" />
+    </form>
+  );
+}
+*/
+
+
+
+
   // this holds the values of form as it's being updated
   const [form, setForm] = useState({
     artistName: "",
