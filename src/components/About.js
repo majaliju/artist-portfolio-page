@@ -11,8 +11,7 @@ import {
   ModalBody,
   Text,
   Button,
-  useDisclosure,
-  AspectRatio,
+  useDisclosure
 } from "@chakra-ui/react";
 
 function About() {

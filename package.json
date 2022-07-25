@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "eslint": "^8.20.0",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "netlify-cli": "^10.11.2"
   }
 }

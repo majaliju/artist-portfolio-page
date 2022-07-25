@@ -3,12 +3,9 @@ import { NavLink } from "react-router-dom";
 import {
   Tabs,
   TabList,
-  TabPanels,
   Tab,
-  TabPanel,
   Text,
-  useColorMode,
-  Button, Center
+  useColorMode, Center
 } from "@chakra-ui/react";
 
 /* add an element to toggle light/dark */
