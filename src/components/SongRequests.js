@@ -8,14 +8,14 @@ function SongRequests() {
 
   // update state with our initial list of songs
   useEffect(() => {
-    fetch("http://localhost:3000/songs")
+    fetch(`${process.env.REACT_APP_API_URL}/songs`)
       .then((r) => r.json())
       .then((songs) => setSongData(songs));
   }, []);
 
   // receives song from SongForm, then POSTS it
   function postNewSong(newSong) {
-    fetch("http://localhost:3000/songs", {
+    fetch(`${process.env.REACT_APP_API_URL}/songs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
