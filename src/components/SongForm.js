@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import {
+  useDisclosure,
   FormControl,
   FormLabel,
   Input,
@@ -10,10 +10,12 @@ import {
   Flex,
   Text,
   Button,
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
 
 function SongForm({ onSubmit }) {
@@ -22,6 +24,10 @@ function SongForm({ onSubmit }) {
     artistName: "",
     songName: "",
   });
+
+  // necessary for the alert message
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
 
   // updates form with every keystroke
   const handleChange = (e) => {
@@ -34,16 +40,10 @@ function SongForm({ onSubmit }) {
   // handleSubmit for the button, sends it up to SongRequests
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (form.artistName !== "" || form.songName !== "") {
+    if (form.artistName !== "" && form.songName !== "") {
       onSubmit(form);
     } else {
-      <Alert status="error">
-        <AlertIcon />
-        <AlertTitle>Enter a real artist!</AlertTitle>
-        <AlertDescription>
-          I won't cover John Cage 4'33, sorry.
-        </AlertDescription>
-      </Alert>;
+      onOpen();
     }
   };
 
@@ -107,6 +107,23 @@ function SongForm({ onSubmit }) {
         >
           submit!
         </Button>
+        <AlertDialog
+          isOpen={isOpen}
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+        >
+          <AlertDialogOverlay>
+            <AlertDialogContent>
+              <AlertDialogBody>Please enter a real song!</AlertDialogBody>
+
+              <AlertDialogFooter>
+                <Button colorScheme="green" onClick={onClose} ml={3}>
+                  Ok, fine
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialogOverlay>
+        </AlertDialog>
       </Center>
     </>
   );
