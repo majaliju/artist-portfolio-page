@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "artist-portfolio-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.20.0"
+    "eslint": "^8.20.0",
+    "gh-pages": "^4.0.0"
   }
 }

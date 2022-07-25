@@ -117,7 +117,7 @@ function SongForm({ onSubmit }) {
               <AlertDialogBody>Please enter a real song!</AlertDialogBody>
 
               <AlertDialogFooter>
-                <Button colorScheme="green" onClick={onClose} ml={3}>
+                <Button colorScheme="pink" onClick={onClose} ml={3}>
                   Ok, fine
                 </Button>
               </AlertDialogFooter>
