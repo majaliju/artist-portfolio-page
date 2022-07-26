@@ -37,6 +37,8 @@ function SongForm({ onSubmit }) {
   };
 
   // handleSubmit for the button, sends it up to SongRequests
+  // check also if the user doesn't enter empty values; 
+  // if so, they're requested to enter an actual song
   const handleSubmit = (e) => {
     e.preventDefault();
     if (form.artistName !== "" && form.songName !== "") {
@@ -57,7 +59,7 @@ function SongForm({ onSubmit }) {
           </Text>
         </Center>
       </Box>
-      <SimpleGrid>
+      <SimpleGrid> 
         <Flex>
           <FormControl>
             <FormLabel htmlFor="artistName"></FormLabel>

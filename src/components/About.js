@@ -61,7 +61,7 @@ function About() {
 
           <ModalFooter>
             <Button colorScheme="purple" mr={3} onClick={onClose}>
-              EXIT
+              BACK
             </Button>
           </ModalFooter>
         </ModalContent>
