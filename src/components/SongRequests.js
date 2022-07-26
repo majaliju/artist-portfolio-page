@@ -8,7 +8,12 @@ function SongRequests() {
 
   // update state with our initial list of songs
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/songs`)
+    fetch(`${process.env.REACT_APP_API_URL}/songs`,{
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin" : "*"
+      }
+    })
       .then((r) => r.json())
       .then((songs) => setSongData(songs))
       .catch((error) => console.log(error))
