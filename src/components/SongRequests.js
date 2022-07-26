@@ -10,7 +10,8 @@ function SongRequests() {
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/songs`)
       .then((r) => r.json())
-      .then((songs) => setSongData(songs));
+      .then((songs) => setSongData(songs))
+      .catch((error) => console.log(error))
   }, []);
 
   // receives song from SongForm, then POSTS it
@@ -25,7 +26,8 @@ function SongRequests() {
       .then((r) => r.json())
       .then((inputtedSong) => {
         setSongData((songData) => [...songData, inputtedSong]);
-      });
+      })
+      .catch((error) => console.log(error));
   }
 
   return (
