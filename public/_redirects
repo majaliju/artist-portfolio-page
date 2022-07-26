@@ -1,5 +1,8 @@
 # Redirects from what the browser requests to what we serve
+
+
+/api/* https://majaliju-artist-portfolio.herokuapp.com/ 200
 /*                 /index.html  200
-/Home              /Home  200
-/About             /About 200
-/SongRequests      /SongRequests  200
+/Home              https://majaliju-artist-portfolio.herokuapp.com//Home  200
+/About             https://majaliju-artist-portfolio.herokuapp.com//About 200
+/SongRequests      https://majaliju-artist-portfolio.herokuapp.com//SongRequests  200
