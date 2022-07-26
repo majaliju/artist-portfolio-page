@@ -8,7 +8,7 @@ function SongRequests() {
 
   // update state with our initial list of songs
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/songs`,{
+    fetch(`{process.env.REACT_APP_LOCAL_URL}/songs`,{
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin" : "*"
@@ -21,7 +21,7 @@ function SongRequests() {
 
   // receives song from SongForm, then POSTS it
   function postNewSong(newSong) {
-    fetch(`${process.env.REACT_APP_API_URL}/songs`, {
+    fetch(`{process.env.REACT_APP_LOCAL_URL}/songs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
