@@ -9,26 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { FaSpotify, FaApple, FaYoutube, FaAngleDoubleUp } from "react-icons/fa";
 
-/* on home page, we're going to display my current
-video (MYB) plus links to social media */
-
-/* code to embed MET YOU BEFORE
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3UNEFsa2dtfM4AYfhg0xr9?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-
-*/
-{/* <div>
-<iframe
-  style="border-radius:12px"
-  src="https://open.spotify.com/embed/track/3UNEFsa2dtfM4AYfhg0xr9?utm_source=generator"
-  width="100%"
-  height="380"
-  frameBorder="0"
-  allowfullscreen=""
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-></iframe>
-</div>; */}
-
 function Home() {
   return (
     <Box>
