@@ -13,10 +13,11 @@ As a musical artist (or a creative person in any endeavor), one needs a centrali
 I needed such a page for myself so I built a simple one, based on React!
 
 ## **WHERE?**
-[You can find it at my website here!](majaliju.com)
+[You can find it at my website here!](https://majaliju.com/)
 
 ## **TOOLS**
 Some of the tools I used on this were:
+
 [React, for the app](https://reactjs.org/)
 
 [ChakraUI, for the UI and extra features] (https://chakra-ui.com/)
