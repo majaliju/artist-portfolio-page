@@ -20,13 +20,13 @@ Some of the tools I used on this were:
 
 [React, for the app](https://reactjs.org/)
 
-[ChakraUI, for the UI and extra features] (https://chakra-ui.com/)
+[Chakra UI, for UI & extra features](https://chakra-ui.com/)
 
-[Heroku, for the backend deployment] (https://heroku.com/)
+[Heroku, for backend deployment](https://heroku.com/)
 
-[Netlify, for the production] (https://www.netlify.com/)
+[Netlify, for the production](https://www.netlify.com/)
 
 
 ## BLOG
-[I wrote about this process recently and all that it put me through, both in a hard and rewarding way.] (https://medium.com/@majalijunyc/phase-2-the-terrible-silver-lining-of-deployment-production-c9153cc9118)
+[I wrote about this process recently and all that it put me through, both in a hard and rewarding way](https://medium.com/@majalijunyc/phase-2-the-terrible-silver-lining-of-deployment-production-c9153cc9118)
 
