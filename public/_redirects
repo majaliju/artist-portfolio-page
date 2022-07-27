@@ -1,5 +1,10 @@
 # Redirects from what the browser requests to what we serve
-/                   /Home
-/Home              /Home         200
+/                   /Home 200
+https://majaliju.com/ /Home 200
+/Home       /Home         200
+
+https://majaliju.com/about             /Home         200
 /About              /About             200
+
+https://majaliju.com/SongRequests /SongRequests 200
 /SongRequests     /SongRequests      200
