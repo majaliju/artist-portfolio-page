@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from '@chakra-ui/react';
 
 function Counter() {
   const [count, setCount] = useState(0);
