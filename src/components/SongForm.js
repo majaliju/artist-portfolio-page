@@ -48,8 +48,6 @@ function SongForm({ onSubmit }) {
     }
   };
 
-  /* I have to introduce a duplicate checker at a point */
-
   return (
     <>
       <Box>

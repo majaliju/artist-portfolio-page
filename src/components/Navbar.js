@@ -9,16 +9,11 @@ import {
   Center,
 } from '@chakra-ui/react';
 
-/* add an element to toggle light/dark */
 
 function Navbar() {
   // for the color changing Button, changes Dark to Light and vice versa
   const { colorMode, toggleColorMode } = useColorMode();
 
-  // do a full gradient slope amongst the colors
-  /*
-  color1 to color 2 for item 1,
-  color 2 to color 3 for item 2, etc */
 
   return (
     <Tabs>
