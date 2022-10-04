@@ -8,24 +8,32 @@ function SongRequests() {
 
   // update state with our initial list of songs
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/songs`)
+    fetch(`https://guarded-springs-87157.herokuapp.com/songs`,{
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin" : "*"
+      }
+    })
       .then((r) => r.json())
-      .then((songs) => setSongData(songs));
+      .then((songs) => setSongData(songs))
+      .catch((error) => console.log(error))
   }, []);
 
   // receives song from SongForm, then POSTS it
   function postNewSong(newSong) {
-    fetch(`${process.env.REACT_APP_API_URL}/songs`, {
+    fetch(`https://guarded-springs-87157.herokuapp.com/songs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin" : "*"
       },
       body: JSON.stringify(newSong),
     })
       .then((r) => r.json())
       .then((inputtedSong) => {
         setSongData((songData) => [...songData, inputtedSong]);
-      });
+      })
+      .catch((error) => console.log(error));
   }
 
   return (

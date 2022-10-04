@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, Center, Box, Button, ButtonGroup, Link } from '@chakra-ui/react';
 import { FaSpotify, FaApple, FaYoutube, FaAngleDoubleUp } from 'react-icons/fa';
 
+<<<<<<< HEAD
 /* on home page, we're going to display my current
 video (MYB) plus links to social media */
 
@@ -21,6 +22,8 @@ video (MYB) plus links to social media */
     allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>
 </div>;
 
+=======
+>>>>>>> bfe22f9ec6bd3def48cbc4425fe338d2e6245187
 function Home() {
   return (
     <Box>
@@ -35,6 +38,7 @@ function Home() {
       </Center>
       <Center>
         <iframe
+<<<<<<< HEAD
           width='360'
           height='315'
           src='https://www.youtube.com/embed/CCdInkRwWO0'
@@ -42,6 +46,16 @@ function Home() {
           frameborder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           allowfullscreen></iframe>
+=======
+          width="360"
+          height="315"
+          src="https://www.youtube.com/embed/CCdInkRwWO0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+>>>>>>> bfe22f9ec6bd3def48cbc4425fe338d2e6245187
       </Center>
       <Center>
         <Text fontSize='1xl' fontWeight='thin'>

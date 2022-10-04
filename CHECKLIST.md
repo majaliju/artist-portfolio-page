@@ -18,4 +18,8 @@
    using [styled components][] or writing CSS files and using id/className to
    style your elements. You can also incorporate a UI framework (like [React
    Bootstrap][react-bootstrap], [Semantic UI][semantic-ui], or [Material
+<<<<<<< HEAD
    UI][material-ui]) if you prefer.
+=======
+   UI][material-ui]) if you prefer.
+>>>>>>> bfe22f9ec6bd3def48cbc4425fe338d2e6245187
