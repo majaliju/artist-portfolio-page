@@ -20,8 +20,8 @@ function Counter() {
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={() => setCount((count) => count + 1)}>Increment</button>
-      <button onClick={() => setCount((count) => count - 1)}>Decrement</button>
+      <Button onClick={() => setCount((count) => count + 1)}>Increment</Button>
+      <Button onClick={() => setCount((count) => count - 1)}>Decrement</Button>
     </div>
   );
 }
