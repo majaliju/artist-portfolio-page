@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Tabs,
   TabList,
@@ -7,7 +7,7 @@ import {
   Text,
   useColorMode,
   Center,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
 /* add an element to toggle light/dark */
 
@@ -25,50 +25,46 @@ function Navbar() {
       <Center>
         <TabList>
           <Tab>
-            <NavLink to="/Home" exact>
+            <NavLink to='/' exact>
               <Text
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize="1xl"
-                fontWeight="thin"
-              >
+                bgGradient='linear(to-l, #7928CA, #FF0080)'
+                bgClip='text'
+                fontSize='1xl'
+                fontWeight='thin'>
                 MAJ ALIJU
               </Text>
             </NavLink>
           </Tab>
           <Tab>
-            <NavLink to="/About" exact>
+            <NavLink to='/About' exact>
               <Text
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize="1xl"
-                fontWeight="thin"
-              >
+                bgGradient='linear(to-l, #7928CA, #FF0080)'
+                bgClip='text'
+                fontSize='1xl'
+                fontWeight='thin'>
                 ABOUT ME
               </Text>
             </NavLink>
           </Tab>
           <Tab>
-            <NavLink to="/SongRequests" exact>
+            <NavLink to='/SongRequests' exact>
               <Text
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize="1xl"
-                fontWeight="thin"
-              >
+                bgGradient='linear(to-l, #7928CA, #FF0080)'
+                bgClip='text'
+                fontSize='1xl'
+                fontWeight='thin'>
                 SONG REQUESTS
               </Text>
             </NavLink>
           </Tab>
           <Tab>
             <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
-              bgClip="text"
-              fontSize="1xl"
-              fontWeight="thin"
-              onClick={toggleColorMode}
-            >
-              {colorMode === "light" ? "GO DARK" : "GO LIGHT"}
+              bgGradient='linear(to-l, #7928CA, #FF0080)'
+              bgClip='text'
+              fontSize='1xl'
+              fontWeight='thin'
+              onClick={toggleColorMode}>
+              {colorMode === 'light' ? 'GO DARK' : 'GO LIGHT'}
             </Text>
           </Tab>
         </TabList>
